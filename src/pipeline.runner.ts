@@ -72,6 +72,7 @@ export class PipelineRunner {
         let repositoryType = buildDefinition.repository.type.trim();
         let sourceBranch = "users/rsu/instctlLv";
         let sourceVersion = null;
+        core.debug(`The target sourceBranch set is:"${sourceBranch}"`);
 
         // If definition is linked to existing github repo, pass github source branch and source version to build
         if (p.equals(repositoryId, this.repository) && p.equals(repositoryType, this.githubRepo)) {

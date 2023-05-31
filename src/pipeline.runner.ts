@@ -70,7 +70,7 @@ export class PipelineRunner {
         // Fetch repository details from build definition
         let repositoryId = buildDefinition.repository.id.trim();
         let repositoryType = buildDefinition.repository.type.trim();
-        let sourceBranch = null;
+        let sourceBranch = this.taskParameters.azureSourceBranch;
         let sourceVersion = null;
 
         // If definition is linked to existing github repo, pass github source branch and source version to build
